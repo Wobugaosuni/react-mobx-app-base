@@ -1,4 +1,7 @@
 import React from 'react';
+import {observer} from 'mobx-react';
+
+import Store from './store-home';
 import './index.styl';
 
 import Input from '../../components/Input';
@@ -7,6 +10,7 @@ import List from '../../components/List';
 // 性能优化
 import PureReanderMixin from 'react-addons-pure-render-mixin';
 
+@observer
 class {{pageName}} extends React.Component {
   constructor(props) {
     super(props);
