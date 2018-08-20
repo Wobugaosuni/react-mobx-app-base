@@ -14,12 +14,12 @@
 
 ## 1. 安装使用
 **全局安装** <br />
-`$ npm install -g react-redux-app-cli`
+`$ npm install -g react-mobx-app-cli`
 
 **使用**
 ```bash
 ## 1. 脚手架初始化
-react-redux-app init
+react-mobx-app init
 
 ## 2. 建立自己的项目
 cd [projece name]
@@ -40,7 +40,7 @@ npm start
 **Javascript**
 - Language: ES6
 - Loader: Babel
-- Framework: React + Redux + React-router-dom
+- Framework: React + Mobx + React-router-dom
 
 **CSS/Preprocessors**
 - Stylus
@@ -85,11 +85,7 @@ npm start
 ```
 .
 └── app  ------------------------------ 项目级代码，前端代码
-│   ├── reducers  --------------------- 存放数据规则(redux)
-    ├── actions  ---------------------- 存放触发的动作(redux)
-    ├── store  ------------------------ 存放store(redux)
-    ├── constants  -------------------- 存放常量(redux)
-    ├── fetch  ------------------------ ajax请求
+│   ├── fetch  ------------------------ ajax请求
     ├── common  ----------------------- 公共库
     │   └── js  ----------------------- 公共js
     │   └── fonts  -------------------- 公共字体，如iconfonts
@@ -106,6 +102,7 @@ npm start
     │   └── Todo  --------------------- 单个组件
     │       ├── index.js  ------------- 组件对应的js
     │       └── index.styl  ----------- 组件对应的样式
+    │       └── store.js  ------------- 管理状态的文件
     ├── index.js  --------------------- 页面入口文件
     ├── index.tmpl.html  -------------- 页面模板文件
 ├── data  ----------------------------- 模拟服务器数据目录
@@ -136,7 +133,7 @@ npm start
 - 处理样式(-D): style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader
 - 处理样式(-S): normalize.css
 - 处理图片(-D): url-loader file-loader
-- 处理js(-D): babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
+- 处理js(-D): babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0 babel-plugin-transform-decorators-legacy(处理observer装饰器)
 - 处理eslint(-D): eslint babel-eslint eslint-plugin-react pre-commit
 
 **Webpack配置相关插件(-D)**
@@ -198,6 +195,7 @@ postcss: [
 ## 8. 相关文档参考
 - [Webpack文档](https://webpack.js.org/)
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)
+- [Mobx](https://cn.mobx.js.org/)
 - [Eslint配置](http://eslint.cn/docs/user-guide/configuring)
 - [Postcss配置](https://github.com/michael-ciniawsky/postcss-load-config)
 - [eslint with pre-commit](http://elijahmanor.com/npm-precommit-scripts/)

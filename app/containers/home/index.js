@@ -2,10 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
-import StoreHome from './store-home';
+import Store from './store-home';
 import './index.styl';
 
-const store = new StoreHome();
+const store = new Store();
 
 @observer
 class Home extends React.Component {
