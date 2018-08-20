@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
-import Store from './store-home';
+import Store from './store';
 import './index.styl';
 
 const store = new Store();
