@@ -148,12 +148,6 @@ npm start
 - 代码压缩: UglifyJsPlugin
 - 分模块: CommonsChunkPlugin
 
-**性能检测(-S)**
-- react-addons-perf
-
-**性能优化(-S)**
-- react-addons-pure-render-mixin
-
 <br />
 
 ## 5. 与其他脚手架对比
