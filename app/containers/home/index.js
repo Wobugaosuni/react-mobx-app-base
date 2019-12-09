@@ -1,16 +1,16 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import {observer} from 'mobx-react';
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {observer} from 'mobx-react'
 
-import Store from './store';
-import './index.styl';
+import Store from './store'
+import './index.styl'
 
-const store = new Store();
+const store = new Store()
 
 @observer
 class Home extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -18,9 +18,9 @@ class Home extends React.Component {
       <div role="containers:Home">
         <Link to="/todo">{store.title}</Link>
       </div>
-    );
+    )
   }
 
 }
 
-export default Home;
+export default Home

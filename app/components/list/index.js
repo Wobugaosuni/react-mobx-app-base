@@ -1,11 +1,11 @@
-import React from 'react';
-import './index.styl';
+import React from 'react'
+import './index.styl'
 
 export default class Input extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = {};
+    this.state = {}
   }
 
   render() {
@@ -21,15 +21,15 @@ export default class Input extends React.Component {
                 >
                   { item.value }
                 </li>
-              );
+              )
             })
           }
         </ul>
       </div>
-    );
+    )
   }
 
   onLiClick(id) {
-    this.props.deleteItem(id);
+    this.props.deleteItem(id)
   }
 }

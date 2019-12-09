@@ -1,16 +1,16 @@
-import React from 'react';
-import './index.styl';
+import React from 'react'
+import './index.styl'
 
-import Input from '../../components/Input';
-import List from '../../components/List';
+import Input from '../../components/Input'
+import List from '../../components/List'
 
 class Todo extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       todoList: []
-    };
+    }
   }
 
   render() {
@@ -20,27 +20,27 @@ class Todo extends React.Component {
         <Input onInputSubmit={this.onInputSubmit.bind(this)} />
         <List todoList={this.state.todoList} deleteItem={this.deleteItem.bind(this)} />
       </div>
-    );
+    )
   }
 
   onInputSubmit(inputValue) {
-    let id = this.state.todoList.length;
+    let id = this.state.todoList.length
 
     this.setState({
       todoList: this.state.todoList.concat({
         id: id,
         value: inputValue
       })
-    });
+    })
   }
 
   deleteItem(id) {
     this.setState({
       todoList: this.state.todoList.filter((element, index) => {
-        return id !== index;
+        return id !== index
       })
-    });
+    })
   }
 }
 
-export default Todo;
+export default Todo

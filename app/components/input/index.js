@@ -1,13 +1,13 @@
-import React from 'react';
-import './index.styl';
+import React from 'react'
+import './index.styl'
 
 class Input extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       inputValue: ''
-    };
+    }
   }
 
   render() {
@@ -20,27 +20,27 @@ class Input extends React.Component {
           onKeyUp={this.onInputKeyUp.bind(this)}
         />
       </div>
-    );
+    )
   }
 
   onInputChange(event) {
-    // console.log('change value', event.target.value);
+    // console.log('change value', event.target.value)
     this.setState({
       inputValue: event.target.value
-    });
+    })
   }
 
   onInputKeyUp(event) {
-    let inputValue = event.target.value;
+    let inputValue = event.target.value
 
     if (event.keyCode === 13 && inputValue) {
       // 提交并清空数据
-      this.props.onInputSubmit(inputValue);
+      this.props.onInputSubmit(inputValue)
       this.setState({
         inputValue: ''
-      });
+      })
     }
   }
 }
 
-export default Input;
+export default Input
