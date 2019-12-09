@@ -1,8 +1,10 @@
 {
   "presets": [
-    "env",
-    "stage-0",
-    "react"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
-  "plugins": ["transform-decorators-legacy"]
+  "plugins": [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator"
+  ]
 }
